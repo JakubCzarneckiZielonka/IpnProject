@@ -40,7 +40,7 @@ export default class signup extends Component {
     
     
     else{
-      var InsertAPIURL = "http://127.0.0.1:8000/SignIn/SignIn.php";
+      var InsertAPIURL = "http://192.168.0.122:8000/api/postnusers";
 
       var headers = {
         'Accept': 'application/json',
@@ -160,6 +160,18 @@ export default class signup extends Component {
                       <Text 
                         style={styles.text}
                       >Register</Text>
+                    </Pressable>
+                  </View>
+                  <View style={styles.loginButtonSection}>
+                  <Pressable
+                    style={styles.loginButton} 
+                    onPress={()=>{
+                      this.props.navigation.navigate("HomeScreen");
+                    }}
+                    >
+                      <Text 
+                        style={styles.text}
+                      >Log In As Guest</Text>
                     </Pressable>
                   </View>
       </View>
