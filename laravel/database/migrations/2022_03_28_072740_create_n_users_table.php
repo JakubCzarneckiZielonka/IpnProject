@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('newuserrs', function (Blueprint $table) {
-            $table->integer('UserID')->primary();
-            $table->string('UserEmail', 100);
-            $table->string('UserPw', 100);
+        Schema::create('NUsers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('email');
+            $table->string('pw');
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('newuserrs');
+        Schema::dropIfExists('n_users');
     }
 };

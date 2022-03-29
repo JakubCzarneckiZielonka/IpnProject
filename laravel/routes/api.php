@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\dataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::get('newuserr');
+// php artisan serve --host=192.168.0.122 --port=8000
+Route::get('nusers', 'App\Http\Controllers\dataController@index');
+Route::post('postnusers', 'App\Http\Controllers\dataController@index');
