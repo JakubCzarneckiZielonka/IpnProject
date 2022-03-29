@@ -21,7 +21,7 @@ export default class signin extends Component {
     if ((Email.length==0) || (Password.length==0)){
       alert("Required Field Is Missing!!!");
     }else{
-      var APIURL = "http://127.0.0.1:8000/SignIn/login.php";
+      var APIURL = "http://192.168.0.122:8000/api/nusers";
 
       var headers = {
         'Accept' : 'application/json',
@@ -124,6 +124,18 @@ export default class signin extends Component {
                       <Text 
                         style={styles.text}
                       >Create new Account</Text>
+                    </Pressable>
+                  </View>
+                  <View style={styles.loginButtonSection}>
+                  <Pressable
+                    style={styles.loginButton} 
+                    onPress={()=>{
+                      this.props.navigation.navigate("HomeScreen");
+                    }}
+                    >
+                      <Text 
+                        style={styles.text}
+                      >Log In As Guest</Text>
                     </Pressable>
                   </View>
       </View>
