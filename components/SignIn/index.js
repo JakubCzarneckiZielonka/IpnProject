@@ -126,18 +126,6 @@ export default class signin extends Component {
                       >Create new Account</Text>
                     </Pressable>
                   </View>
-                  <View style={styles.loginButtonSection}>
-                  <Pressable
-                    style={styles.loginButton} 
-                    onPress={()=>{
-                      this.props.navigation.navigate("HomeScreen");
-                    }}
-                    >
-                      <Text 
-                        style={styles.text}
-                      >Log In As Guest</Text>
-                    </Pressable>
-                  </View>
       </View>
     );
   }
