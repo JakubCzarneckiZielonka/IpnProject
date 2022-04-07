@@ -16,7 +16,13 @@ class ProfileScreen extends React.Component {
   render() {  
     return (  
         <View style={styles.container}>  
-          <Text>Profile Screen</Text>  
+          <Text>To see more content log in or sign up for free</Text>
+            <Pressable style={styles.loginButton}>
+                <Text style={styles.text}>Log In</Text>
+                </Pressable>
+            <Pressable style={styles.loginButton}>
+                <Text style={styles.text}>Sign Up</Text>
+                </Pressable>  
         </View>  
     );  
   }  
@@ -44,7 +50,26 @@ const styles = StyleSheet.create({
         flex: 1,  
         justifyContent: 'center',  
         alignItems: 'center'  
-    },  
+    },
+    text: {
+        fontSize: 18,
+        lineHeight: 21,
+        fontWeight: 'bold',
+        letterSpacing: 0.25,
+        color: 'white',
+        textTransform: 'uppercase'
+      },
+     loginButton: {
+       backgroundColor: '#f69b31',
+       color: 'white',
+       marginTop: 15,
+       height: 35,
+       justifyContent: 'center',
+       alignItems: 'center',
+       width: '70%',
+       borderRadius: 10,
+
+     }, 
 });  
 const TabNavigator = createMaterialBottomTabNavigator(  
     {  
